@@ -5,14 +5,14 @@ The project is for parsing User Agent String to User Agent Object
 
 ###There is a [UserAgent](https://github.com/Gpetkov/UserAgentRepository/blob/master/UserAgentParser/src/uk/co/newsint/cip/utilities/ua/UserAgent.java) class with eight properties
 -
-<p>* deviceType          (example --> TABLET)
-<p>* deviceMaker        (example --> BlackBerry)
-<p>* deviceModel          (example --> Bold)
-<p>* deviceModelVersion  (example --> 9900)
-<p>* os                   (Operation system (example --> Windows))
-<p>* osVersion (Operation system version (example --> 5.0))
-<p>* browser (Current browser MSIE,Safari,Chrome)
-<p>* browserVersion (Current browser version example --> 534.57.2 (Safari))
+<p>* deviceType         
+<p>* deviceMaker        
+<p>* deviceModel          
+<p>* deviceModelVersion  
+<p>* os                   
+<p>* osVersion 
+<p>* browser 
+<p>* browserVersion 
 
 --
 
@@ -29,3 +29,18 @@ The project is for parsing User Agent String to User Agent Object
 ###### All tree classes @Override parse(String userAgentString) method
 --
 
+### EXAMPLE
+--
+<p>*String userAgentString="BlackBerry8520/4.6.1.314 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/301";*<p>
+<p>*UserAgentParser userAgentParser = new CompositeUserAgentParser();*<p>
+<p>*UserAgent userAgent=userAgentParser.parse(userAgentString);*<p>
+<p>*userAgent.getDeviceType();--------------->MOBILE*<p>
+<p>*userAgent.getDeviceMaker();-------------->BlackBerry*<p>
+<p>*userAgent.getDeviceModel();-------------->8520*<p>
+<p>*userAgent.getDeviceModelVersion();------->8520*<p>
+<p>*userAgent.getOS();----------------------->BlackBerry*<p>
+<p>*userAgent.getOSVersion();---------------->4.6.1.314*<p>
+<p>*userAgent.getBrowser();------------------>BlackBerry*<p>
+<p>*userAgent.getBrowserVersion();----------->UNKNOWN*<p>
+
+--
